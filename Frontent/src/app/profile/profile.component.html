@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<body>
+    <section class="container">
+        <header>Customer Profile</header>
+        <form action="#" class="form">
+
+            <div class="profile-pic-div">
+                <label for="file" id="uploadBtn">Choose Photo</label>
+                <br>
+                <img class="rounded-circle" [src]="urllink" alt="{{customer.profileDp}}" style="height: 150px; width: 150px;" id="photo">
+                <input type="file" class="btn btn-success btn-sm" name="profileDp" (change)="selectFiles($event)" id="file">
+                
+            </div>    
+
+            <div class="input-box">
+                <label>Full Name</label>
+                <input matInput [(ngModel)]="customer.customerName" name="customerName" type="text" >
+            </div>
+
+            <div class="input-box">
+                <label>Email Address</label>
+                <input matInput [(ngModel)]="customer.email" name="email" type="text" >
+            </div>
+
+            <div >
+                <div class="input-box">
+                    <label>Phone Number</label>
+                    <input matInput [(ngModel)]="customer.mobileNo" name="mobileNo" type="number" >
+                </div>
+            </div>
+
+            <div class="input-box address">
+                <label style="font-size:x-large">Address</label>
+
+                <br><br>
+               
+                    <mat-label>House No</mat-label>
+                    <input matInput [(ngModel)]="customer.address!.houseNo" name="houseNo" type="text">
+
+                    <mat-label>LandMark</mat-label>
+                    <input matInput [(ngModel)]="customer.address!.landMark" name="landMark" type="text">
+                  
+
+                    <mat-label>City</mat-label>
+                    <input matInput [(ngModel)]="customer.address!.city" name="city" type="text">
+
+                    <mat-label>Zip Code</mat-label>
+                    <input matInput [(ngModel)]="customer.address!.zipCode" name="zipCode" type="number" >
+            </div>
+            <button (click)="updatedata()">Submit</button>
+        </form>
+    </section>
+</body>

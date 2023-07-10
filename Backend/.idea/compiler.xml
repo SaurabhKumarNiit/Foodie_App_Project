@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="menuService" />
+        <module name="customerService" />
+        <module name="restaurantService" />
+        <module name="apiGateWay" />
+        <module name="customerAuthentication" />
+        <module name="eurekaServer" />
+        <module name="adminService" />
+        <module name="paymentGateWay" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adminService" target="11" />
+      <module name="apiGateWay" target="11" />
+      <module name="Capstone_Project" target="11" />
+      <module name="customerAuthentication" target="11" />
+      <module name="customerService" target="11" />
+      <module name="eurekaServer" target="11" />
+      <module name="menuService" target="11" />
+      <module name="paymentGateWay" target="11" />
+      <module name="restaurantService" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="adminService" options="-parameters" />
+      <module name="apiGateWay" options="-parameters" />
+      <module name="customerAuthentication" options="-parameters" />
+      <module name="customerService" options="-parameters" />
+      <module name="eurekaServer" options="-parameters" />
+      <module name="menuService" options="-parameters" />
+      <module name="paymentGateWay" options="-parameters" />
+      <module name="restaurantService" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style="height: 100px;">
+    <a class="navbar-brand" routerLink="/home"><span id="logo"> <img src="assets\image\cutlery.gif" alt=""
+          width="70px"><strong>Foodie App</strong></span> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-light" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+
+
+          <button class="btn btn-outline-dark " style="margin-right: 25px; margin-top: 5px; height: 65px; width: 65px;"
+            mat-flat-button routerLink="/home" routerLinkActive="active-link">
+            <img src="assets\image\home.gif" alt="" width="55px">
+
+
+          </button>
+        </li>
+
+
+
+        <li>
+          <button (click)="logIn()" class="btn btn-outline-dark " style=" margin-top: 6px; height: 65px; width: 65px;" mat-flat-button
+            routerLink="/login">
+            <img src="assets\image\login.gif" alt="" width="55px">
+            <!-- <mat-icon>login</mat-icon>
+              Login -->
+          </button>
+        </li>
+
+
+        <li>
+          <span id="cart"> 
+            <button class="btn btn-outline-dark " routerLink="/cart"
+              style="height: 65px; width: 65px; margin-left: 10px; margin-right: 10px;" mat-flat-button
+              class="btn btn-outline-dark ">
+              <div matBadge="{{totalItem}}" matBadgeSize="medium" matBadgeOverlap="false" class="demo-section"></div>
+              <img src="assets\image\shopping-cart.gif" alt="" width="60px">
+            </button>
+          </span>
+        </li>
+
+        <li>
+          <nav>
+            <ul class="menu">
+              <li><img src="assets\image\stall.gif" alt="" width="75px" height="65px">
+                <ul class="sub-menu">
+
+                  <li>
+                    <button class="example-button-row" mat-raised-button color="primary" routerLink="/favourite">
+                      <mat-icon>favorite</mat-icon> Favorite</button>
+                  </li>
+                  <li>
+                    <button class="example-button-row" mat-raised-button color="primary" routerLink="/restaurant">
+                      <mat-icon>menu</mat-icon>Restaurant</button>
+                  </li>
+                  <li>
+                    <a href="/item">
+                      <button class="example-button-row" mat-raised-button color="primary">
+                        <mat-icon>more_horiz</mat-icon>Menu</button>
+
+                    </a>
+                    
+                  </li>
+                  <!-- <li>
+                    <button class="example-button-row" mat-raised-button color="primary" (click)="logOut()">
+                      <mat-icon>logout</mat-icon>LogOut</button>
+                  </li> -->
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </li>
+
+        <li>
+          <div id="profile">
+            <nav>
+              <ul class="menu">
+                <li> 
+
+                    <div id="profile">
+                      <img class="rounded-circle"  [src]="urllink" alt="{{customer.profileDp}}" style="height: 70px; width: 60px;" id="photo">
+                  
+                      
+                  </div> 
+                  <ul class="sub-menu">
+
+                    <li>
+                      <button class="example-button-row" mat-raised-button color="primary" routerLink="/profile">
+                        <mat-icon>
+                          account_circle
+                        </mat-icon>Profile</button>
+                    </li>
+                    <li>
+                      <button class="example-button-row" mat-raised-button color="primary" (click)="logOut()">
+                        <mat-icon>logout</mat-icon>LogOut</button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,70 @@
+.container{
+    margin-top: 70px;
+    margin-left: 30px;
+
+    width: 800px;
+
+}
+
+#photo{
+    height: 100px;
+    width: 100px;
+}
+.display{
+    margin-top: 10px;
+    margin-left: 1000px;
+    font-weight: bolder;
+}
+#addCart{
+    margin-left: 1000px;
+}
+
+
+.card{
+    width: auto;
+    padding: 40px;
+    position: absolute;
+    background: rgba(255, 255,255, 0.04);
+    border: none;
+    box-shadow: -1px 4px 28px 0px rgba(7, 7, 7, 0.75);
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.example-disabled {
+  display: inline-block;
+}
+
+button{
+    margin-left: 50px;
+}
+
+
+.form {
+    margin-top: 30px;
+  }
+  .form .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .input-box label {
+    color: #333;
+  }
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #0c0101;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }

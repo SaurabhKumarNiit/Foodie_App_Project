@@ -1,0 +1,124 @@
+
+<div  id="wrapper">
+    <div  id="page-content-wrapper">
+        <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                <h2 class="fs-2 m-0">Admin-Dashboard</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+           
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <!-- <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets\admin-image\profile.gif" height="50px" width="50px" class="rounded-circle">
+                           <strong>Saurabh Kumar</strong> 
+                        </a> -->
+                        <ul >
+                            <li>
+                                <button (click)="logOut()" mat-raised-button color="warn">
+                                    <mat-icon>logout</mat-icon>
+                                    Log Out </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+
+        <div class="container-fluid px-4">
+            <div class="row g-3 my-2">
+                <div class="col-md-3">
+                    <a id="tab" href="admin/addRestaurant">
+                    <div id="pill" class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded-pill">
+                        <div>
+                           
+                            <p class="fs-5">Add Restaurant</p>
+                        </div>
+                        <img src="assets\admin-image\add-file-restaurant.gif" height="80px" width="80px" alt="">
+                    </div>
+                 </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a id="tab" href="/admin/restaurants">
+                    <div id="pill" class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded-pill">
+                        <div>
+                           
+                            <p class="fs-5">Edit & Delete Restaurant</p>
+                        </div>
+                        <img src="assets\admin-image\edit_icon.gif" height="80px" width="80px" alt="">
+                        <img src="assets\admin-image\delete-restaurant.gif" height="80px" width="80px" alt="">
+                    </div>
+                </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a id="tab" href="/admin/restaurantForitem">
+                    <div id="pill" class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded-pill">
+                        <div>
+                          
+                            <p class="fs-5">Edit & Delete Menu Item</p>
+                        </div>
+                        <img src="assets\admin-image\edit_icon.gif" height="80px" width="80px" alt="">
+                        <img src="assets\admin-image\delete-restaurant.gif" height="80px" width="80px" alt="">
+                    </div>
+                </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a id="tab" href="admin/displayRestaurants">
+                    <div id="pill" class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded-pill" >
+                        <div>
+                           
+                            <p class="fs-5">Add Items</p>
+                        </div>
+                        <img src="assets\admin-image\add-file-restaurant.gif" height="80px" width="80px" alt="">
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <br><br><br>
+            <div id="data" class="row my-4">
+                <h2 class="fs-4 mb-3">All Customers</h2>
+                <div class="col">
+                    <table class="table bg-white rounded shadow-sm  table-hover rounded">
+                        <thead>
+                            <tr>
+                                <th scope="col" width="50">#</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Customer Name</th>
+                                <th scope="col">Mobile Number</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let order of orders let i = index" id="data" >
+                                <th scope="row">{{i+1}}.</th>
+                                <td><strong>{{order.email}}</strong></td>
+                                <td><strong>{{order.customerName}}</strong> </td>
+                                <td><strong>{{order.mobileNo}}</strong> </td>
+                                <td><strong>{{order.address?.houseNo}} {{order.address?.landMark}} 
+                                    {{order.address?.city}} {{order.address?.zipCode}}</strong> </td>
+                              
+                                    <br>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

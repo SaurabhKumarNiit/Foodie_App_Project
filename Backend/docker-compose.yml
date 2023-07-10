@@ -1,0 +1,131 @@
+version: '3.9'
+services:
+  customer-service:
+    image: customer_image
+    container_name: customer-service
+    build: customerService/
+    restart: always
+    networks:
+      - my-network
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongoService
+      - apigateway
+      - eureka-service
+
+  menu-service:
+    image: menu_image
+    container_name: menu-service
+    build: menuService/
+    restart: always
+    networks:
+      - my-network
+    ports:
+      - 9001:9001
+    depends_on:
+      - mongoService
+      - apigateway
+      - eureka-service
+
+
+  restaurant-service:
+    image: restaurant_image
+    container_name: restaurant-service
+    build: restaurantService/
+    restart: always
+    networks:
+      - my-network
+    ports:
+      - 9088:9088
+    depends_on:
+      - mongoService
+      - apigateway
+      - eureka-service
+
+
+  mongoService:
+    image: mongo
+    container_name: mongoService
+    ports:
+      - 27017:27017
+    networks:
+      - my-network
+
+  authentication-service:
+    image: authentication_image
+    container_name: authentication-service
+    build: customerAuthentication/
+    restart: always
+    networks:
+      - my-network
+    ports:
+      - 8084:8084
+    depends_on:
+      - mysqlService
+      - apigateway
+      - eureka-service
+
+  admin-service:
+    image: admin_image
+    container_name: admin-service
+    build: adminService/
+    restart: always
+    networks:
+      - my-network
+    ports:
+      - 8085:8085
+    depends_on:
+      - mysqlService
+      - apigateway
+      - eureka-service
+
+  payment-service:
+    image: payment_image
+    container_name: payment-service
+    build: paymentGateWay/
+    restart: always
+    networks:
+      - my-network
+    ports:
+      - 8999:8999
+    depends_on:
+      - mysqlService
+      - apigateway
+      - eureka-service
+
+  mysqlService:
+    image: mysql:latest
+    container_name: mysqlService
+    networks:
+      - my-network
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  apigateway:
+    container_name: apigateway
+    build: apiGateWay/
+    networks:
+      - my-network
+    ports:
+      - 9100:9100
+    depends_on:
+      - eureka-service
+
+  eureka-service:
+    container_name: eureka-service
+    build: eurekaServer/
+    restart: always
+    networks:
+      - my-network
+    ports:
+      - 8761:8761
+
+networks:
+  my-network:
+    driver: bridge

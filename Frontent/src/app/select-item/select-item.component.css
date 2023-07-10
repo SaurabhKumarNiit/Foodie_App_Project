@@ -1,0 +1,47 @@
+.container{
+    margin-top: 70px;
+    margin-left: 30px;
+
+    width: 800px;
+
+}
+
+#photo{
+    height: 100px;
+    width: 100px;
+}
+.h2{
+    margin-top: 10px;
+    margin-left: 1000px;
+}
+#addCart{
+    margin-left: 1000px;
+}
+
+
+.card{
+    width: auto;
+    padding: 40px;
+    position: absolute;
+    /* transform: translate(-50%,-50%);
+    transform: translate(-50%,-20%); */
+ 
+    /* z-index: 999; */
+    /* text-align: center; */
+    background: rgba(255, 255,255, 0.04);
+    border: none;
+    box-shadow: -1px 4px 28px 0px rgba(7, 7, 7, 0.75);
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.example-disabled {
+  display: inline-block;
+}
+
+button{
+    margin-left: 50px;
+}

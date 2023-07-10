@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-8">
+        <div class="card" >
+
+                <img src="{{item.imagePath}}" alt="" height="600px" width="700px">                   
+           
+        </div>
+      
+    </div>
+
+    <div class="h2">
+      <h2>Item Name :{{item.itemName}}</h2>
+    <h3>Price :₹ {{item.itemPrice}}</h3>
+    <h3>Description :{{item.description}}</h3>
+    <h3>Cuisin :{{item.itemType}}</h3> 
+    </div>
+
+    
+
+    <br><br><br> 
+
+    <div id="addCart">
+
+        <button mat-fab extended color="primary" (click)=addToCart()>
+            <mat-icon class="material-symbols-outlined">
+                shopping_cart_checkout
+                </mat-icon>
+            Add To Cart
+          </button>
+      
+          
+        <button mat-fab extended color="accent" (click)=addToFavourite(item)>
+            <mat-icon>favorite</mat-icon>
+            Add To Favorite
+          </button>
+    </div>
+  </div>
+</div>
+

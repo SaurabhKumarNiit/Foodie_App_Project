@@ -1,0 +1,48 @@
+
+ <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+ <div class="navigation">
+     <div>
+    <h1>
+    
+     <a style="text-decoration: none; color: gray;" href="/admin">
+         <img src="assets\admin-image\infographic.gif" height="60px" width="70px" alt=""> Admin-Dashboard</a>
+    </h1> 
+     </div>
+ </div>
+ <mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+
+    <div class="content">
+
+        <header>Add Restaurant</header>
+        <form [formGroup]="addRestaurant" class="restro-form" (submit)="createRestro()">
+         <!-- <div class="field">
+       
+            <mat-icon style="margin-top: 10px; margin-right: 5px;">
+               storefront
+            </mat-icon>    <input type="number" required placeholder="Enter Restaurant Id" formControlName="restaurantId">
+         </div> -->
+           <div class="field">
+              <i class="material-icons">&#xe56c;</i>
+              <input type="text" required placeholder="Enter Restaurant Name" formControlName="restaurantName">
+           </div>
+           <div class="field space">
+              <i class="fa fa-map-marker" style="font-size: 23px;"></i>
+              <input type="text" required placeholder="Enter Restaurant Location" formControlName="restaurantLocation">
+           </div>
+           <br>
+           <div class="field space">
+            <i class="fa fa-map-marker" style="font-size: 23px;"></i>
+            <input type="text" required placeholder="Enter Restaurant Image Url" formControlName="imageUrl">
+         </div>
+         <br>
+         <div class="field space">
+            <i class="fa fa-map-marker" style="font-size: 23px;"></i>
+            <input type="text" required placeholder="Enter Restaurant rating" formControlName="rating">
+         </div>
+         <br>
+           <div class="field">
+              <input type="submit" value="Submit">
+           </div>
+           <br>
+        </form>
+     </div>

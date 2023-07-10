@@ -1,0 +1,129 @@
+<app-navbar></app-navbar>
+
+
+<div class="searchtab">
+    <div class="box">
+        <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder= " Search......">
+        <a href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+<!-- 
+<div class="form-group">
+    <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+</div> -->
+
+
+
+
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <!-- <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt=""> -->
+                <button mat-fab extended color="primary">
+                    <mat-icon class="material-symbols-outlined">
+                        select_all
+                    </mat-icon>
+                    All Items
+                  </button>
+                 
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Veg')">
+                <!-- <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt=""> -->
+                <button mat-fab extended color="warn">
+                    
+                   Veg
+                  </button>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Non-veg')">
+                <!-- <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt=""> -->
+                <button mat-fab extended color="warn">
+                    
+                   Non-veg
+                  </button>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Sweets')">
+              
+                <button mat-fab extended color="warn">
+                    
+                    Sweets
+                  </button>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Dosa')">
+              
+                <button mat-fab extended color="warn">
+                    
+                   Dosa
+                  </button>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('BEVERAGES')">
+              
+                <button mat-fab extended color="warn">
+                    
+                    BEVERAGES
+                  </button>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Burger')">
+              
+                <button mat-fab extended color="warn">
+                    
+                    Burger
+                  </button>
+            </a>
+        </div>
+        <div class="item">
+
+            <a (click)="filter('Pizza')">
+              
+                <!-- <h6><button>Breakfast Dishes</button></h6> -->
+                <button mat-fab extended color="warn">        
+                    Pizza
+                  </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid mt-4 mb-4">
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let fd of  filterCategory | filter:searchKey:'itemName'">
+            <div class="foodbox mt-3 mb-3"  >
+                <a routerLink="{{fd.itemId}}">
+                <img src="{{fd.imagePath}}">
+                </a>
+                <h1>{{fd.itemName}}</h1>
+                <p>{{fd.description}}</p>
+                <span>{{fd.itemPrice | currency:'INR'}}</span>
+  
+            
+            </div>
+          
+
+        </div>
+
+
+
+    </div>
+   
+</div>

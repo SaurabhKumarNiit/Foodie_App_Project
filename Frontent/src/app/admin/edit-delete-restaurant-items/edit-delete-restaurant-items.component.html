@@ -1,0 +1,85 @@
+
+
+        <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+        <div class="navigation">
+            <div>
+           <h1>
+           
+            <a style="text-decoration: none; color: gray;" href="/admin">
+                <img src="assets\admin-image\infographic.gif" height="60px" width="70px" alt=""> Admin-Dashboard</a>
+           </h1> 
+            </div>
+        </div>
+        <mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-8">
+        <div class="card" >
+
+                <img src="{{item.imagePath}}" alt="" height="600px" width="700px">                   
+           
+        </div>
+      
+    </div>
+    <div class="display">
+
+        <form action="" class="form"> 
+        <div class="input-box">
+            <label>Item Name</label>
+            <input matInput [(ngModel)]="item.itemName" name="itemName" type="text" >
+        </div>
+
+        <div class="input-box">
+            <label>Item Price</label>
+            <input matInput [(ngModel)]="item.itemPrice" name="itemPrice" type="text" >
+        </div>
+
+        <div >
+            <div class="input-box">
+                <label>Description</label>
+                <input matInput [(ngModel)]="item.description" name="description" type="text" >
+            </div>
+        </div>
+
+        <div >
+            <div class="input-box">
+                <label>Item Type</label>
+                <input matInput [(ngModel)]="item.itemType" name="itemType" type="text" >
+            </div>
+        </div>
+
+        <div >
+            <div class="input-box">
+                <label>Image Url</label>
+                <input matInput [(ngModel)]="item.imagePath" name="imagePath" type="text" >
+            </div>
+        </div>
+
+    </form>
+
+    </div>
+   
+
+
+    <br><br><br> 
+
+    <div id="addCart">
+
+      
+          
+        <button (click)=DeleteItem() mat-fab extended class="bg-danger">
+            <mat-icon>delete</mat-icon>
+            Delete Restaurant
+          </button>
+
+          <button (click)=UpdateItem() mat-fab extended class="bg-success">
+            <mat-icon>update</mat-icon>
+            Update Restaurant
+          </button>
+    </div>
+  </div>
+</div>
+
+

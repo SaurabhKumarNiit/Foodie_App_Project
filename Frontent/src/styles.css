@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+/* body{
+    font-family: 'poppins',sans-serif;
+}
+#image{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#image:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+/* body {
+    background-image: url("https://img.freepik.com/premium-photo/food-background-with-place-text-with-different-kinds-pasta-tomatoes-herbs-mushrooms-eggs-seasonings-scattered-light-marble-background-italian-cuisine-concept_90258-3540.jpg?w=2000");
+    background-color: #cccccc;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    font-family: Arial, Helvetica, sans-serif;
+   } */
+
+   /* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

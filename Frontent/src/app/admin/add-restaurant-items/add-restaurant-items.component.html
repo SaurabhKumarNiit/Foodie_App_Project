@@ -1,0 +1,51 @@
+
+        <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+        <div class="navigation">
+            <div>
+           <h1>
+           
+            <a style="text-decoration: none; color: gray;" href="/admin">
+                <img src="assets\admin-image\infographic.gif" height="60px" width="70px" alt=""> Admin-Dashboard</a>
+           </h1> 
+            </div>
+        </div>
+        <mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+
+   <div class="content">
+    <header>Add Restaurant</header>
+    <form [formGroup]="addItemForRestaurant" class="restro-form" (submit)="addItemForSingleRestaurant()">
+     <div class="field">
+   
+        <mat-icon style="margin-top: 10px; margin-right: 5px;">
+           storefront
+        </mat-icon>    <input type="number" required placeholder="Enter Item Id" formControlName="itemId">
+     </div>
+       <div class="field">
+          <i class="material-icons">&#xe56c;</i>
+          <input type="text" required placeholder="Enter Item Name" formControlName="itemName">
+       </div>
+       <div class="field space">
+          <i class="fa fa-map-marker" style="font-size: 23px;"></i>
+          <input type="text" required placeholder="Enter Item Type" formControlName="itemType">
+       </div>
+       <br>
+       <div class="field space">
+        <i class="fa fa-map-marker" style="font-size: 23px;"></i>
+        <input type="text" required placeholder="Enter Item Price" formControlName="itemPrice">
+     </div>
+     <br>
+     <div class="field space">
+        <i class="fa fa-map-marker" style="font-size: 23px;"></i>
+        <input type="text" required placeholder="Enter Item description" formControlName="description">
+     </div>
+     <div class="field space">
+        <i class="fa fa-map-marker" style="font-size: 23px;"></i>
+        <input type="text" required placeholder="Enter Item Image Path" formControlName="imagePath">
+     </div>
+     <br>
+       <div class="field">
+          <input type="submit" value="Submit">
+       </div>
+       <br>
+    </form>
+ </div>

@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+<ng-container *ngIf="favourites.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>   
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Item Type</th>
+                            <th>Description</th>
+                            <th>Remove Item</th>
+                            <!-- <th>Action</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of favourites; let i = index">
+                            <td><h2> {{i+1}}</h2></td>
+                            <td><img src="{{item.imagePath}}"  width="150px" height="100px"></td>
+                            <td><h3> {{item.itemName}}</h3></td>
+                            <td><h3> {{item.itemType}}</h3></td>
+                            <td><h3> {{item.description}}</h3></td>
+                            <td>
+                               <button (click)="removeItem(item.itemId)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="favourites.length ==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Favourites</h5>
+        </div>
+        <div class="center">
+            <img src="assets\image\heart.gif" 
+            alt="Add to Favorite Image" height="200px" width="200px">
+
+            <h2>Back to menu and Add some Favorites</h2>
+            <button routerLink="/item"  mat-fab extended color="primary">
+                <mat-icon>favorite</mat-icon>
+                Menu
+              </button>
+           
+        </div>
+    </div>
+</ng-container>

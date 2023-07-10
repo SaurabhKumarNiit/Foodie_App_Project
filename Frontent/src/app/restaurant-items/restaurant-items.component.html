@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+
+<div class="searchtab">
+  <div class="box">
+      <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder= " Search......">
+      <a href="#">
+          <i class="fas fa-search"></i>
+      </a>
+  </div>
+</div>
+
+
+<div *ngFor="let restaurant of restaurants">
+  <h1>
+    hello
+    {{restaurant.restaurantName}}
+  </h1>
+</div>
+
+<div class="container-fluid mt-5 mb-5">
+
+    <div class="row">
+        <div class="container-fluid">
+        </div>
+        <div class="col-lg-3" *ngFor="let fd of items  | filter:searchKey:'itemName'">
+
+
+            <div class="foodbox mt-3 mb-3">
+                <a routerLink="{{fd.itemId}}">
+                    <img src="{{fd.imagePath}}">
+                </a>
+                <h1>{{fd.itemName}}</h1>
+                <p>{{fd.description}}</p>
+                <span>{{fd.itemPrice | currency:'INR'}}</span>
+            </div>
+
+        </div>
+    </div>
+</div>

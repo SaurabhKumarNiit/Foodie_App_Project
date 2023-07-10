@@ -1,0 +1,75 @@
+
+        <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+        <div class="navigation">
+            <div>
+           <h1>
+           
+            <a style="text-decoration: none; color: gray;" href="/admin">
+                <img src="assets\admin-image\infographic.gif" height="60px" width="70px" alt=""> Admin-Dashboard</a>
+           </h1> 
+            </div>
+        </div>
+        <mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-8">
+        <div class="card" >
+
+                <img src="{{restaurant.imageUrl}}" alt="" height="600px" width="700px">                   
+           
+        </div>
+      
+    </div>
+    <div class="display">
+
+        <form action="" class="form"> 
+        <div class="input-box">
+            <label>Restaurant Name</label>
+            <input matInput [(ngModel)]="restaurant.restaurantName" name="restaurantName" type="text" >
+        </div>
+
+        <div class="input-box">
+            <label>Restaurant Address</label>
+            <input matInput [(ngModel)]="restaurant.restaurantLocation" name="restaurantLocation" type="text" >
+        </div>
+
+        <div >
+            <div class="input-box">
+                <label>Restaurant rating</label>
+                <input matInput [(ngModel)]="restaurant.rating" name="rating" type="number" >
+            </div>
+        </div>
+
+        <div >
+            <div class="input-box">
+                <label>Image Url</label>
+                <input matInput [(ngModel)]="restaurant.imageUrl" name="imageUrl" type="text" >
+            </div>
+        </div>
+    </form>
+
+    </div>
+   
+
+
+    <br><br><br> 
+
+    <div id="addCart">
+
+      
+          
+        <button (click)=DeleteRestaurant() mat-fab extended class="bg-danger">
+            <mat-icon>delete</mat-icon>
+            Delete Restaurant
+          </button>
+
+          <button (click)=UpdateRestaurant() mat-fab extended class="bg-success">
+            <mat-icon>update</mat-icon>
+            Update Restaurant
+          </button>
+    </div>
+  </div>
+</div>
+

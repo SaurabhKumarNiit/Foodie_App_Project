@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Capstone_Project.iml" filepath="$PROJECT_DIR$/.idea/Capstone_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adminService/adminService.iml" filepath="$PROJECT_DIR$/adminService/adminService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apiGateWay/apiGateWay.iml" filepath="$PROJECT_DIR$/apiGateWay/apiGateWay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customerAuthentication/customerAuthentication.iml" filepath="$PROJECT_DIR$/customerAuthentication/customerAuthentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customerService/customerService.iml" filepath="$PROJECT_DIR$/customerService/customerService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaServer/eurekaServer.iml" filepath="$PROJECT_DIR$/eurekaServer/eurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/menuService/menuService.iml" filepath="$PROJECT_DIR$/menuService/menuService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/paymentGateWay/paymentGateWay.iml" filepath="$PROJECT_DIR$/paymentGateWay/paymentGateWay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restaurantService/restaurantService.iml" filepath="$PROJECT_DIR$/restaurantService/restaurantService.iml" />
+    </modules>
+  </component>
+</project>

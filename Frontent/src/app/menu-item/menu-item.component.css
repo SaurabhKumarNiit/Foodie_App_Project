@@ -1,0 +1,124 @@
+.banner
+{
+    background-image: url('https://retailworldmagazine.com.au/wp-content/uploads/2020/06/Starbucks-At-Home-for-retail-media.jpeg');
+    height: 600px;
+    background-position: center top;
+    background-size: cover;
+    animation: slider 15s infinite alternate-reverse;
+}
+@keyframes slider{
+    0%{
+        background-image: url('https://wallpaperaccess.com/full/7066826.jpg');
+    }
+    35%{
+        background-image: url('https://miro.medium.com/max/1400/1*Pjilnt2CYNC6tiFSRP-8yQ.png');
+    }
+    75%{
+        background-image: url('https://www.passionateinmarketing.com/wp-content/uploads/2021/12/Screenshot-2021-12-28-132323.jpg');
+    }
+    65%{
+        background-image: url('https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-06/pride-whopper-tease-lc-220603-bae464.jpg');
+    }
+    
+}
+.content
+{
+    height: 500px;
+    top: 30%;
+    left: 20%;
+    /* position: absolute; */
+}
+.content h2 
+{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 70px;
+    font-weight: bold;
+  
+}
+.content a 
+{
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.content a:hover 
+{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.stepBox 
+{
+    background-color: #000;
+    padding: 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.stepBox h1 
+{
+    font-size: 50px;
+    font-weight: bold;
+    color:var(--primary-color);
+}
+.stepBox p 
+{
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+}
+.highlight
+{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.foodbox 
+{
+    padding: 10px 5px;
+} 
+.foodbox img
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.foodbox h1 
+{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.viewmorebtn
+{
+    text-decoration: none;
+    background-color:var(--primary-color);
+    color: #000;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    
+}
+
+@media screen and (max-width:600px)
+{
+    .banner
+{
+    height: 700px;
+}
+}
+
+#item{
+    text-decoration: none;
+    color:black
+}
+img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+} 
