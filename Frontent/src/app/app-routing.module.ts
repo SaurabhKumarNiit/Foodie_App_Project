@@ -15,14 +15,12 @@ import { ItemsComponent } from './items/items.component';
 import { LoginInterfaceComponent } from './login-interface/login-interface.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ProfileDataComponent } from './profile-data/profile-data.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterInterfaceComponent } from './register-interface/register-interface.component';
 import { RestaurantItemsComponent } from './restaurant-items/restaurant-items.component';
 import { RestaurantsDisplayComponent } from './restaurants-display/restaurants-display.component';
 import { SelectItemComponent } from './select-item/select-item.component';
 import { SnackbarDisplayComponent } from './snackbar-display/snackbar-display.component';
-
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -40,7 +38,6 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'restaurant',component:RestaurantsDisplayComponent},
   {path:'about',component:AboutUsComponent},
-  {path:'data',component:ProfileDataComponent},
   {path:'admin',component:AdminComponent},
   {path:'admin/addRestaurant',component:AddRestaurantComponent},
   {path:'admin/restaurants',component:DisplayRestaurantComponent},
