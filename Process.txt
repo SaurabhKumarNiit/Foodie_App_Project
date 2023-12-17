@@ -1,0 +1,1 @@
+Run sepratly frontend and backend both.
